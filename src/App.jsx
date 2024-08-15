@@ -5,11 +5,10 @@ import Form from './Main/Form'
 
 function App() {
   return (
-    <>
-      <h1>Hello World</h1>
+    <div className='container'>
       <Form />
       <Results />
-    </>
+    </div>
   )
 }
 

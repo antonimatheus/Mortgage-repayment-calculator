@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+.Results--containerDIV {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    color: var(--White);
+    gap: 10px;
+}
+
+.Results--containerDIV > div > p {
+    text-align: center;
+    color: var(--Slate300);
+}
+
+@keyframes floating {
+    0%, 100% {
+      transform: translateY(0); /* Posição inicial e final */
+    }
+    50% {
+      transform: translateY(-5px); /* Desloca a imagem para cima em 10px */
+    }
+  }
+  
+  .Results--containerDIV > div > img {
+    animation: floating 5s ease-in-out infinite;
+    /* 3s é o tempo da animação; 
+       'ease-in-out' é o ritmo da animação; 
+       'infinite' faz a animação se repetir infinitamente */
+  }
+  
+  

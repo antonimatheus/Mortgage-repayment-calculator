@@ -1,0 +1,194 @@
+@charset "UTF-8";
+
+.Form--container {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.Form--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /*background-color: red;*/
+}
+
+.Form--title {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 80%;
+    font-size: 15px;
+    /*background-color: blue;*/
+}
+
+.Form--title h1 {
+    font-size: 20px;
+}
+
+.Form--clearAll {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 20%;
+   /*background-color: green;*/
+}   
+
+.Form--clearAll p {
+    font-size: rgba(0, 0, 0, 0.4);
+    text-decoration: underline rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.Form--fillOut {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+   /* background-color: green;*/
+}
+
+.Form--mortgageAmount {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.Form--mortgageAmountDIV {
+    display: flex;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.Form--mortgageAmountIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    font-weight: 600;
+    background-color: lightcoral;
+}
+.Form--mortgageAmountInput {
+    width: 90%;
+    display: flex;
+}   
+
+.Form--mortgageAmountInput input {
+   width: 100%;
+   padding: 8px;
+}
+
+.Form--term--rate {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 25px;
+}
+
+.Form--term--rate div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.Form--term {
+    display: flex;
+    width: 50%;
+    gap: 5px;
+}
+
+.Form--termDIV {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.Form--term div {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.Form--rate {
+    display: flex;
+    width: 50%;
+    gap: 5px;
+}
+
+.Form--rateDIV {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.Form--rate div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-weight: 600;
+    background-color: orangered;
+}
+
+.Form--rateInput {
+    width: 100%;
+}
+
+.Form--rateInput input {
+    padding: 8px;
+}
+
+.Form--rateIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+}
+
+.Form--termInput input {
+    background-color: purple;
+    padding: 8px;
+}
+
+.Form--termIcon {
+    display: flex;
+    width: 10%;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    background-color: orange;
+}
+
+.Form--mortgageType {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.Form--mortgageTypeRepayment, .Form--mortgageTypeInterestOnly {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: 600;
+    gap: 10px;
+}
+
+.Form--calculateRepayments {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 50%;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    background-color: var(--Lime);
+    gap: 5px;
+    cursor: pointer;
+}
+
+
+.Form--calculateRepayments img {
+    width: 20px;
+}

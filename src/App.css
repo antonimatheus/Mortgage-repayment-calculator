@@ -21,17 +21,45 @@
 --font-family: "Plus Jakarta Sans", sans-serif; /*Weights: 500, 700*/
 }
 
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+.container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     width: 100vw;
     height: 100vh;
     font-family: var(--font-family);
+    font-size: 16px;
+    color: var(--Slate900);
+    background-color: var(--Slate100);
+}
+
+.Form--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 80vh;
+    border-radius: 20px 0px 0px 20px;
+    background-color: var(--White);
+    gap: 20px;
+}
+
+.Results--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 80vh;
+    border-radius: 0px 20px 20px 0px;
+    background-color: var(--Slate900);
+    gap: 20px;
 }
