@@ -6,8 +6,10 @@ import Form from './Main/Form'
 function App() {
   return (
     <div className='container'>
-      <Form />
-      <Results />
+      <div>
+        <Form />
+        <Results />
+      </div>
     </div>
   )
 }
