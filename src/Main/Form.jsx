@@ -3,7 +3,8 @@ import './Form.css'
 
 import iconCalculator from "../assets/mortgage-repayment-calculator-main/assets/images/icon-calculator.svg"
 
-function Form() {
+function Form(props) {
+
     return (
         <div className='Form--container'>
             <div className='Form--header'>
@@ -12,7 +13,7 @@ function Form() {
                         Mortgage Calculator
                     </h1>
                 </div>
-                <div className='Form--clearAll'>
+                <div className='Form--clearAll' onClick={props.clearAll}>
                     <p>
                         Clear All
                     </p>
@@ -28,7 +29,13 @@ function Form() {
                             </p>
                         </div>
                         <div className='Form--mortgageAmountInput'>
-                            <input type="number" name="MortgageAmount" id="MortgageAmount" />
+                            <input 
+                                type="number" 
+                                name="MortgageAmount" 
+                                id="MortgageAmount" 
+                                value={props.mortgageAmount}
+                                onChange={(e) => props.setMortgageAmount(parseFloat(e.target.value))}
+                            />
                         </div>   
                     </div>
                 </div>
@@ -37,7 +44,13 @@ function Form() {
                         <label htmlFor="MortgageTerm">Mortgage Term</label>
                         <div className='Form--termDIV'>
                             <div className='Form--termInput'>
-                                <input type="number" name="MortgageTerm" id="MortgageTerm" />
+                                <input 
+                                    type="number" 
+                                    name="MortgageTerm" 
+                                    id="MortgageTerm" 
+                                    value={props.mortgageTerm}
+                                    onChange={(e) => props.setMortgageTerm(parseFloat(e.target.value))}
+                                />
                             </div>
                             <div className='Form--termIcon'>
                                 <p>
@@ -50,7 +63,13 @@ function Form() {
                         <label htmlFor="InterestRate">Interest Rate</label>
                         <div className='Form--rateDIV'>
                             <div className='Form--rateInput'>
-                                <input type="number" name="InterestRate" id="InterestRate" />
+                                <input 
+                                    type="number" 
+                                    name="InterestRate" 
+                                    id="InterestRate" 
+                                    value={props.interestRate}
+                                    onChange={(e) => props.setInterestRate(parseFloat(e.target.value))}
+                                />
                             </div>
                             <div className='Form--rateIcon'>
                                 <p>
@@ -67,15 +86,29 @@ function Form() {
                         </p>  
                     </div>
                     <div className='Form--mortgageTypeRepayment'>
-                        <input type="radio" name="Repayment" id="Repayment" />
+                        <input 
+                            type="radio" 
+                            name="mortgageType" 
+                            id="Repayment" 
+                            value="Repayment"
+                            checked={props.mortgageType === "Repayment"}
+                            onChange={(e) => props.setMortgageType(e.target.value)}
+                        />
                         <label htmlFor="Repayment">Repayment</label>
                     </div>
                     <div className='Form--mortgageTypeInterestOnly'>
-                        <input type="radio" name="InterestOnly" id="InterestOnly" />
+                        <input 
+                            type="radio" 
+                            name="mortgageType" 
+                            id="InterestOnly" 
+                            value="InterestOnly"
+                            checked={props.mortgageType === "InterestOnly"}
+                            onChange={(e) => props.setMortgageType(e.target.value)}
+                        />
                         <label htmlFor="InterestOnly">Interest Only</label>
                     </div>
                 </div>
-                <button className='Form--calculateRepayments'>
+                <button className='Form--calculateRepayments' onClick={props.calculate}>
                     <img src={iconCalculator} alt="iconCalculator" />
                     <p>Calculate Repayments</p>
                 </button>

@@ -1,12 +1,18 @@
 import React from 'react'
-
 import "./Results.css"
-
 import illustrationEmpty from "../assets/mortgage-repayment-calculator-main/assets/images/illustration-empty.svg"
 
-function Results() {
+function Results(props) {
     return (
         <div className='Results--container'>
+            {props.res ? 
+            <div className='Results--res'>
+                <p>Monthly Repayment: €{props.res}</p>
+                <p>Total You'll Repay Over the Term: €{props.totalRepayment}</p>
+            </div>
+
+            :
+
             <div className='Results--containerDIV'>
                 <div className='Results--img'>
                     <img src={illustrationEmpty} alt="" />
@@ -23,6 +29,7 @@ function Results() {
                     </p>
                 </div>
             </div>
+        }
         </div>
     )
 }
