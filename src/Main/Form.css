@@ -213,9 +213,14 @@
     background-color: var(--Lime);
     color: var(--Slate900);
     gap: 5px;
+    transition: .4s;
     cursor: pointer;
 }
 
 .Form--calculateRepayments img {
     width: 20px;
+}
+
+.Form--calculateRepayments:hover {
+    background-color: hsl(61, 86%, 58%);
 }

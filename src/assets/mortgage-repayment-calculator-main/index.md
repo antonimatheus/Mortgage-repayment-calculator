@@ -28,8 +28,7 @@
 
   Your results
 
-  Your results are shown below based on the information you provided. 
-  To adjust the results, edit the form and click “calculate repayments” again.
+  
 
   Your monthly repayments
 
